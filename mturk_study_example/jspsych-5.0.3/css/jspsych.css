@@ -1,0 +1,695 @@
+/*
+ * CSS for jsPsych experiments.
+ *
+ * This stylesheet provides minimal styling to make jsPsych
+ * experiments look polished without any additional styles.
+ */
+
+
+/* fonts and type */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+html {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 36px; /* RAS font-size: 18px; */
+  line-height: 1.6em;
+ 
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+p {
+  clear: both;
+  display: block; /* RAS added*/
+}
+
+.very-small {
+  font-size: 50%;
+}
+.small {
+  font-size: 75%;
+}
+.large {
+  font-size: 125%;
+}
+.very-large {
+  font-size: 150%;
+}
+
+
+
+/* Classes for changing location of things */
+
+.left {
+  float: left; /*RAS change*/
+}
+.right {
+  float: right;/*RAS change*/
+}
+.center-content {
+  text-align: center;
+  margin: 0px 0px;
+}
+
+.block-center {
+  margin: 1em auto; /* RAS margin: 1em auto; */
+  display: block; /*RAS removed and unremoved*/
+  font-size: 36px;/* RAS added */
+  text-align: center; /* RAS added */
+}
+
+.buttons_css { /* RAS added so no scroll bar because both word and buttons had margins 45% auto because both in .block-center class */
+  margin: 0px 0px;
+}
+
+/* Form elements like input fields and buttons */
+
+input[type="text"] {
+  font-family: 'Open Sans', 'Arial', sans-sefif;
+  font-size: 14px; 
+}
+
+/* borrowing Bootstrap style for btn elements, but combining styles a bit */
+.jspsych-btn {
+  /*display: inline-block; RAS removed*/
+  padding: 6px 12px;
+  margin: -80% 25px 0px 25px; /* margin: 0px 8px;*/
+  font-size: 25px; /* RAS font-size: 14px; */
+  /*font-weight: 400; RAS removed*/
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  width:200px; /* RAS added*/
+}
+
+.jspsych-btn:hover {
+  background-color: #ddd;
+  border-color: #aaa;
+}
+
+/* Container holding jsPsych content */
+
+.jspsych-display-element {
+  width: 90%; /*RAS changed 800px*/
+  margin: auto auto;/*RAS changed 50px auto 50px auto;*/
+  height:100%;/*RAS added*/
+}
+
+/* jsPsych progress bar */
+
+#jspsych-progressbar-container {
+  color: #777;
+  border-bottom: 2px solid #dedede;
+  background-color: #f3f3f3;
+  margin-bottom: 1em;
+  text-align: center;
+  padding: 10px 0px;
+}
+#jspsych-progressbar-container s {}
+#jspsych-progressbar-outer {
+  background-color: #dedede;
+  border-radius: 5px;
+  padding: 1px;
+  width: 800px;
+  margin: auto;
+}
+#jspsych-progressbar-inner {
+  background-color: #aaa;
+  /* #3EB3D7; */
+  width: 0%;
+  height: 1em;
+  border-radius: 5px;
+}
+
+/* PLUGIN: jspsych-animation */
+
+#jspsych-animation-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* PLUGIN: jspsych-categorize-animation */
+
+#jspsych-categorize-animation-stimulus {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* PLUGIN: jspsych-categorize */
+
+#jspsych-categorize-stimulus {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.feedback {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* PLUGIN: jspsych-free-sort */
+
+#jspsych-free-sort-arena {
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #444;
+}
+.jspsych-free-sort-draggable {
+  cursor: move;
+}
+#jspsych-free-sort-done-btn {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+}
+
+/* PLUGIN: jspsych-instructions */
+
+.jspsych-instructions-nav {
+  text-align: center;
+  margin-top: 2em;
+}
+.jspsych-instructions-nav button {
+  margin: 20px;
+}
+
+/* PLUGIN: jspsych-multi-stim-multi-response */
+
+#jspsych-multi-stim-multi-response-stimulus {
+  display: block;
+  margin: auto;
+}
+
+/* PLUGIN: jspsych-palmer */
+
+#jspsych-palmer-snapCanvas {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* PLUGIN: jspsych-same-different */
+
+.jspsych-same-different-stimulus {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* PLUGIN: jspsych-single-stim */
+
+#jspsych-single-stim-stimulus {
+    display: inline-block;
+ /* margin-left: auto; RAS remove */
+ /* margin-right: auto; RAS remove */
+ /* margin: 25% auto; /* RAS added */
+    /*height: 49px;/* RAS added from online idea 58px to match the line-height specified elsewhere */
+    width: 400px;/* RAS added from online idea */
+    position: fixed;/* RAS added from online idea */
+    top: 50%;/* RAS added from online idea */
+    left: 50%;/* RAS added from online idea */
+    /*margin-top: 0px;/* RAS added from online idea half of the height*/
+    margin-left: -200px; /* RAS added from online idea */
+    text-align: center; /* RAS added */
+    line-height:0px; /*RAS added*/
+    position: fixed;/*RAS added to center vertically*/
+    -webkit-transform: translateY(-50%); /*RAS added to center vertically*/
+    -ms-transform: translateY(-50%);/*RAS added to center vertically*/
+    -moz-transform: translateY(-50%);/*RAS added to center vertically*/
+    -o-transform: translateY(-50%);/*RAS added to center vertically*/
+    transform: translateY(-50%);/*RAS added to center vertically*/
+}
+
+/*RAS ADD FOR WORD PAIR PRESENTATION*/
+.jspsych-display-element #jspsych-single-stim-stimulus-RASnew {
+   margin:0 0 0 0;
+   padding: 0 0 0 0;
+   
+
+}
+
+/*RAS ADD FOR WORD PAIR PRESENTATION*/
+.jspsych-display-element #jspsych-single-stim-stimulus-RASnew #leftCue{
+  position:absolute;
+  width: calc(50% - 1em);
+  left:0%;
+  text-align:right;
+ /* border: solid red;*/
+   -webkit-transform: translateY(-50%); /*RAS added to center vertically*/
+  -ms-transform: translateY(-50%);/*RAS added to center vertically*/
+  -moz-transform: translateY(-50%);/*RAS added to center vertically*/
+  -o-transform: translateY(-50%);/*RAS added to center vertically*/
+  transform: translateY(-50%);/*RAS added to center vertically*/
+    padding: 0em 0em;
+    top: 50%;
+ 
+}
+
+/*RAS ADD FOR WORD PAIR PRESENTATION*/
+.jspsych-display-element #jspsych-single-stim-stimulus-RASnew #rightTarget{
+  position:absolute;
+  width: calc(50% - 1em);
+  right:0%;
+  text-align:left;
+ /* border: solid blue;*/
+    -webkit-transform: translateY(-50%); /*RAS added to center vertically*/
+  -ms-transform: translateY(-50%);/*RAS added to center vertically*/
+  -moz-transform: translateY(-50%);/*RAS added to center vertically*/
+  -o-transform: translateY(-50%);/*RAS added to center vertically*/
+  transform: translateY(-50%);/*RAS added to center vertically*/
+   padding: 0em 0em;
+  top: 50%;
+}
+
+/*RAS ADD FOR WORD PAIR PRESENTATION*/
+.jspsych-display-element #jspsych-single-stim-stimulus-RASnew #centerFix{
+  position:absolute;
+  width:100%;
+  left:0%;
+  text-align:center;
+    -webkit-transform: translateY(-50%); /*RAS added to center vertically*/
+  -ms-transform: translateY(-50%);/*RAS added to center vertically*/
+  -moz-transform: translateY(-50%);/*RAS added to center vertically*/
+  -o-transform: translateY(-50%);/*RAS added to center vertically*/
+  transform: translateY(-50%);/*RAS added to center vertically*/
+  padding: 0em 0em;
+  top: 50%;
+}
+
+/*RAS ADD FOR WORD PAIR PRESENTATION*/
+.jspsych-display-element #jspsych-single-stim-stimulus-RASnew p {
+  padding: 0em 0em 0em 0em !important;  
+  margin: 0em 0em !important;
+}
+
+
+/*RAS ADD for word pair presentation during test */
+
+.jspsych-display-element .jspsych-survey-text-question #leftCue{
+  position:absolute;
+  width: calc(50% - 1em);
+  left:0%;
+  text-align:right;
+ /* border: solid red;*/
+   -webkit-transform: translateY(-50%); /*RAS added to center vertically*/
+  -ms-transform: translateY(-50%);/*RAS added to center vertically*/
+  -moz-transform: translateY(-50%);/*RAS added to center vertically*/
+  -o-transform: translateY(-50%);/*RAS added to center vertically*/
+  transform: translateY(-50%);/*RAS added to center vertically*/
+    padding: 0em 0em;
+    top: 50%;
+ 
+}
+/*RAS ADD FOR WORD PAIR PRESENTATION*/
+.jspsych-display-element .jspsych-survey-text-question #centerFix{
+  position:absolute;
+  width:100%;
+  left:0%;
+  text-align:center;
+    -webkit-transform: translateY(-50%); /*RAS added to center vertically*/
+  -ms-transform: translateY(-50%);/*RAS added to center vertically*/
+  -moz-transform: translateY(-50%);/*RAS added to center vertically*/
+  -o-transform: translateY(-50%);/*RAS added to center vertically*/
+  transform: translateY(-50%);/*RAS added to center vertically*/
+  padding: 0em 0em;
+  top: 50%;
+  /*border:dotted black;*/
+}
+
+/*RAS ADD FOR WORD PAIR PRESENTATION*/
+.jspsych-display-element .jspsych-survey-text-question p {
+  padding: 0em 0em 0em 0em !important;  
+  margin: 0em 0em !important;
+}
+
+
+
+
+
+
+#jspsych-single-stim-stimulus-RAS-instructions { /* RAS added for specifically formatting text from jspsych-single-stim-RAS (which are for instruction slides) */
+  display: block;
+  margin: 5% auto; /* RAS added */
+  text-align: center; /* RAS added */ 
+  
+}
+
+/* PLUGIN: jspsych-survey-text */
+
+.jspsych-survey-text {
+  /*margin: 0.25em 0em; RAS removed */
+  text-align: center; /* RAS added */
+  font-size: 36px;
+
+}
+.jspsych-survey-text-question {
+  	/* RAS change */
+  	margin:0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+
+
+#textArea_submit {
+  text-align: center; /* RAS added */
+  font-size: 36px;
+}
+
+textarea { /* RAS added so no resizing in textarea */
+  resize: none;
+  white-space: nowrap;
+  overflow: hidden;
+  
+  border: 0px;
+  outline: 0;/* CONCERN: may not work to remove blue outine in firefox / opera or others. check */
+  border-bottom: 3px solid black;
+  font-size: 36px;
+ /* margin-bottom: -.25em;
+  padding: 0 0 0 .05em; RAS remove these because want CR on it's own line*/
+  /*display:inline-block;RAS added to put CR on separate line*/
+  /*padding: 0px 0px 0px 0px;
+  margin-bottom: 36px;*/
+  line-height: 1.6em;
+  font-family: 'Open Sans', 'Arial', sans-serif;/*RAS add*/
+  text-transform: uppercase;/*RAS add*/
+  
+  
+  position:absolute;
+  width: 360px; /*RAS change because font size should generally be 36px, so 10...is 360px*/
+  left: calc(50% + 1em); /* RAS this +1em adds the padding to match other side*/
+  text-align:left;
+ /* border: solid blue;*/
+  -webkit-transform: translateY(-50%); /*RAS added to center vertically*/
+  -ms-transform: translateY(-50%);/*RAS added to center vertically*/
+  -moz-transform: translateY(-50%);/*RAS added to center vertically*/
+  -o-transform: translateY(-50%);/*RAS added to center vertically*/
+  transform: translateY(-50%);/*RAS added to center vertically*/
+  /*padding: 0em 1em 0em 0em !important; /* add the 1em here because not doing so with p*/
+  top: 50%;
+  padding: 0em 0em 0em 0em !important; /*no padding because taken care of in positioning */
+  margin: 0em 0em -3px 0em;
+  font-size: 36px !important;
+  
+
+}
+ 
+}
+
+
+
+.subjectID { /* RAS added for initial formatting of survey text to get subject ID*/
+  text-align: center;
+  margin: 0 0 -.25em 1em;
+}
+
+
+/* RAS add to have Final Questions button */
+#jspsych-survey-text-next {
+  /* RAS add from btn */
+  display: inline-block; /*RAS removed*/
+  position:fixed;
+  bottom:15%;
+  left:50%;
+  /*padding: 6px 12px;*/
+  /*margin: 0px 8px; /* margin: 0px 8px;*/
+  margin: 0em 0em;
+  margin-left:-100px;/*RAS added*/
+  font-size: 25px; /* RAS font-size: 14px; */
+  /*font-weight: 400; RAS removed*/
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  width:200px; /* RAS added*/
+  
+}
+
+#jspsych-survey-text-next:hover {
+  /* RAS add from btn */
+  background-color: #ddd;
+  border-color: #aaa;
+}
+
+
+/* PLUGIN: jspsych-survey-likert */
+
+.jspsych-survey-likert-statement {
+  display:block;
+  font-size: 25px; /* RAS font-size: 18px; */
+  /*padding-top: 30px; RAS removed */
+  /*margin-bottom:10px; RAS removed */
+  margin: 15% auto 15% auto; /* RAS added*/
+  text-align: center; /* RAS added*/
+}
+.jspsych-survey-likert-opts {
+  list-style:none;
+  width:100%;
+  margin:0 0 0 0; /* RAS margin:0; */
+  padding:0 0 35px; 
+  display:block;
+  font-size: 25px; /* RAS font-size: 14px; */
+  line-height:1.1em;
+}
+
+
+.jspsych-survey-likert-opt-label {
+  line-height: 1.1em;
+}
+
+.jspsych-survey-likert-opts:before {
+  content: '';
+  position:relative;
+  top:11px;
+  left:9%; /* RAS changed may have been originally commented out or may not have been originally commented out...but regardless was initiall left:9.5%*/
+  display:block;
+  background-color:#efefef;
+  height:4px;
+  width:83%; /* RAS changed....width: 100% , now 83% because 9*2 = 18 and 100-18=82...but not quite long enough so now 83%*/ 
+}
+
+.jspsych-survey-likert-opts:last-of-type {
+  border-bottom: 0;
+}
+
+.jspsych-survey-likert-opts li {
+  display:inline-block;
+  /*width:19%;*/
+  text-align:center;
+  vertical-align: top;
+}
+
+.jspsych-survey-likert-opts li input[type=radio] {
+  display:block;
+  position:relative;
+  top:0;
+  left:50%;
+  margin-left:-6px;
+}
+
+/* borrowing Bootstrap style for btn elements, but combining styles a bit */ /* RAS added from .jspsych-btn with changes*/
+.jspsych-btn-RAS {
+  /*display: inline-block; RAS removed*/
+  padding: 6px 12px;
+  margin: 15% auto; /* margin: 0px 8px;*/
+  font-size: 25px; /* RAS font-size: 14px; */
+  /*font-weight: 400; RAS removed*/
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  width:auto; /* RAS added*/
+  display:block; /* RAS added*/
+  
+  
+}
+
+.jspsych-btn-RAS:hover {/* RAS added from .jspsych-btn with changes*/
+  background-color: #ddd;
+  border-color: #aaa;
+}
+
+
+
+#finalQuestionsFillIn { /*RAS add for final questions formatting */
+	text-align:center !important;
+	width:50% !important;
+	left:25% !important;
+
+}
+
+
+
+
+#jspsych-survey-likert-next { /* RAS added*/
+  display:block;
+  margin: 50px auto;
+}
+
+
+
+
+
+
+
+
+
+
+.RAS-likert { /* RAS added...copied initially from .jspsych-survey-likert-opts */
+  list-style:none;
+  width:100%;
+  margin:0 0 0 0; /* RAS margin:0; */ 
+  padding:0 0 35px; 
+  display:block;
+  font-size: 25px; /* RAS font-size: 14px; */
+  line-height:1.1em;
+}
+
+.RAS-likert-label {/* RAS added...copied initially from .jspsych-survey-likert-opts */
+  line-height: 1.1em;
+}
+
+.RAS-likert:before {/* RAS added...copied initially from .jspsych-survey-likert-opts and edited */
+  content: '';
+  position:relative;
+  top:11px;
+  /*left:9.5%;*/
+  display:block;
+  /*background-color:#efefef; RAS remove bar */
+  height:4px;
+  width:100%;
+}
+
+.RAS-likert:last-of-type {/* RAS added...copied initially from .jspsych-survey-likert-opts */
+  border-bottom: 0;
+}
+
+.RAS-likert li {/* RAS added...copied initially from .jspsych-survey-likert-opts  */
+  display:inline-block;
+  /*width:19%;*/
+  text-align:center;
+  vertical-align: top;
+}
+
+.RAS-likert li input[type=radio] {/* RAS added...copied initially from .jspsych-survey-likert-opts */
+  display:block;
+  position:relative;
+  top:0;
+  left:50%;
+  margin-left:-6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ *
+ * PLUGIN: jspsych-survey-multi-choice
+ *
+ */
+
+.jspsych-survey-multi-choice-question {
+  margin-top: 2em;
+  margin-bottom: 2em;
+ }
+
+.jspsych-survey-multi-choice-text span.required {
+  color: darkred;
+}
+
+.jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-text {
+  text-align: center;
+}
+
+.jspsych-survey-multi-choice-option {
+  line-height: 2;
+}
+.jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-option {
+  display: inline-block;
+  margin-left: 1em;
+  margin-right: 1em;
+  vertical-align: top;
+}
+
+label.jspsych-survey-multi-choice-text input[type="radio"] {
+  margin-right: 1em;
+}
+
+#jspsych-survey-multi-choice-next {
+  display: block;
+  margin: auto;
+}
+
+/** PLUGIN: jspsych-visual-search-circle **/
+
+#jspsych-visual-search-circle-svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* PLUGIN: jspsych-vsl-animate-occlusion */
+
+#jspsych-vsl-animate-occlusion-canvas {
+  display: block;
+  margin: auto;
+}
+
+/* PLUGIN: jspsych-xab */
+
+.jspsych-xab-stimulus {
+  display: inline-block; /*RAS change */
+  margin-left: auto;
+  margin-right: auto;
+}
