@@ -14,13 +14,13 @@ This manual/tutorial was created in 2017 for use with JsPsych version 5.0.3.
 # Files
 
 Presentation/tutorial at Memory and Cognition Lab meeting May 2017:
-Presentation - Running Experiments Using jsPsych and MySQL - May 2017 - RuthShaffer.pptx
+Presentation - Running Experiments Using jsPsych and MySQL - May 2017 - RuthShaffer.pdf
 
 Manual PDF:
 Manual - Running Experiments Using jsPsych and MySQL - May 2017 - RuthShaffer.pdf
 
 JsPsych tutorial code (jspsych_tutorial):
-This folder contains the online tutorial files provided by JsPsych version 5.0.3 (Copyright (c) 2015 Joshua R. de Leeuw) to go along with the presentation above (Presentation - Running Experiments Using jsPsych and MySQL - May 2017 - RuthShaffer.pptx)
+This folder contains the online tutorial files provided by JsPsych version 5.0.3 (Copyright (c) 2015 Joshua R. de Leeuw) to go along with the presentation above (Presentation - Running Experiments Using jsPsych and MySQL - May 2017 - RuthShaffer.pdf)
 
 MTurk study example (mturk_study_example):
 This folder contains an example of a complete experiment run online on MTurk by Ruth Shaffer. This experiment was created using JsPsych libraries and documentation (version 5.0.3; Copyright 2015 Joshua R. de Leeuw). The experiment incorporates several features that are often needed for online data collection:
